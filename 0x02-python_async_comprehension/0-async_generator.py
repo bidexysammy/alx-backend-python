@@ -4,8 +4,9 @@
 
 import asyncio
 import random
+from typing import generator
 
-async def async_generator() -> [int, none, none]
+async def async_generator() -> [float, None, None]:
     """
        args:
        nil arguments passed
@@ -15,4 +16,4 @@ async def async_generator() -> [int, none, none]
     a = 0
     while (a < 10):
         await asyncio.sleep(1)
-        yield random.randomint(0, 10) 
+        yield random.uniform(0, 10)
