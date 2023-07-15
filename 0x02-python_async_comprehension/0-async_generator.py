@@ -1,18 +1,14 @@
 #!/usr/bin/env python3
-
-""" This program creates a coroutine called async_generator"""
-
+'''Task 0's module.
+'''
 import asyncio
 import random
-import generator
+from typing import Generator
 
-async def async_generator() -> int:
-    """
-       args:
-       nil arguments passed
-       Return:
-       it returns a random integer
-    """
+
+async def async_generator() -> Generator[float, None, None]:
+    '''Generates a sequence of 10 numbers.
+    '''
     for _ in range(10):
         await asyncio.sleep(1)
-        return random.uniform(0, 10)
+        yield random.random() * 10
